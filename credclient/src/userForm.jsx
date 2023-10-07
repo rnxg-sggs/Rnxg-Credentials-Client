@@ -12,15 +12,6 @@ const UserForm = () => {
     collegeEmail: '',
     personalEmail: '',
     phone: '',
-    color: '', // Added a color field based on the "Choose your theme" radio buttons
-    textAndValues: '', // Added a textAndValues field based on the "Text and Values" input
-    dropdown: '', // Added a dropdown field based on the "Dropdown" select
-    multiple: [], // Added a multiple field based on the "Multiple" select (as an array)
-    additionalInfo: '', // Added an additionalInfo field based on the textarea
-    likeThis: '', // Added a likeThis field based on the "Do you like this?" radio buttons
-    accept: false, // Added an accept field based on the "Please check all" checkboxes
-    spam: false,
-    toolbars: false,
   });
 
   const handleChange = (e) => {
@@ -54,17 +45,7 @@ const UserForm = () => {
   return (
     <div className="container">
     <form>
-      <h1>Material Design formular</h1>
-      <div className="form-group">
-        <select>
-          <option>Value 1</option>
-          <option>Value 2</option>
-        </select>
-        <label htmlFor="select" className="control-label">
-          Selectbox
-        </label>
-        <i className="bar"></i>
-      </div>
+      <h1>Client Credential</h1>
       <div className="form-group">
         <input type="text" required />
         <label htmlFor="input" className="control-label">
@@ -78,38 +59,6 @@ const UserForm = () => {
           Textarea
         </label>
         <i className="bar"></i>
-      </div>
-      <div className="checkbox">
-        <label>
-          <input type="checkbox" defaultChecked />
-          <i className="helper"></i>I'm the label from a checkbox
-        </label>
-      </div>
-      <div className="checkbox">
-        <label>
-          <input type="checkbox" />
-          <i className="helper"></i>I'm the label from a checkbox
-        </label>
-      </div>
-      <div className="form-radio">
-        <div className="radio">
-          <label>
-            <input type="radio" name="radio" defaultChecked />
-            <i className="helper"></i>I'm the label from a radio button
-          </label>
-        </div>
-        <div className="radio">
-          <label>
-            <input type="radio" name="radio" />
-            <i className="helper"></i>I'm the label from a radio button
-          </label>
-        </div>
-      </div>
-      <div className="checkbox">
-        <label>
-          <input type="checkbox" />
-          <i className="helper"></i>I'm the label from a checkbox
-        </label>
       </div>
     </form>
     <div className="button-container">
