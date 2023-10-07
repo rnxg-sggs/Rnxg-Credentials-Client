@@ -26,7 +26,7 @@ function App() {
     console.log(formData);
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/register', formData);
+      const response = await axios.post('https://rnxg-credentials-server.vercel.app/register', formData);
 
       if (response.status === 201) {
         console.log('Form data submitted:', response.data);
