@@ -209,7 +209,12 @@ h1 {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
+.footer{
+  text-align: center;
+  background-color: 	#DCDCDC;
+  font-weight: 100;
 
+}
 .checkbox .helper {
   color: #999;
   position: absolute;
