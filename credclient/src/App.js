@@ -42,6 +42,7 @@ function App() {
         });
         setErrors({});
         // Refresh the page after successful submission
+        alert("Thank you for the response")
         window.location.reload();
       }
     } catch (error) {
