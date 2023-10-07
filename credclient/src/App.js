@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import './userForm.css';
 import axios from 'axios';
+import logo from './logo.png';
 function App() {
   const [formData, setFormData] = useState({
     username: '',
@@ -63,11 +65,12 @@ function App() {
     <>
       <div className="container">
         <form onSubmit={handleSubmit}>
-        <div>
-          <img src="https://rnxg.co.in/wp-content/uploads/2021/03/rnxg-logo.png" alt="RNXG" />
-        <h1>RNXG Member List</h1>
-        </div>
-        
+          <div className='Logo'>
+            <img src={logo} alt="RNXG" />
+            <h1>RNXG Member List</h1>
+          </div>
+
+
           <div className="form-group">
             <input
               type="text"
