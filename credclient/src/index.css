@@ -11,3 +11,318 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* App.css (or your preferred CSS file) */
+
+body,
+input,
+select,
+textarea,
+body * {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body::after,
+body::before,
+input::after,
+input::before,
+select::after,
+select::before,
+textarea::after,
+textarea::before,
+body *::after,
+body *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+  background-image: linear-gradient(top, #f2f2f2, #e6e6e6);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 2em;
+}
+
+.container {
+  position: relative;
+  max-width: 40rem;
+  margin: 5rem auto;
+  background: #fff;
+  width: 100%;
+  padding: 3rem 5rem 0;
+  border-radius: 1px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+  transition: transform 0.28s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.form-group {
+  position: relative;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.form-help {
+  margin-top: 0.125rem;
+  margin-left: 0.125rem;
+  color: #b3b3b3;
+  font-size: 0.8rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #999;
+  line-height: 1.6;
+  width: 100%;
+  color: #333;
+  transition: all 0.28s ease;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: normal;
+  transition: all 0.28s ease;
+}
+
+.form-group .bar {
+  position: relative;
+  border-bottom: 1px solid #999;
+  display: block;
+}
+
+.form-group .bar::before {
+  content: '';
+  height: 1px;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  background: #337ab7;
+  transition: left 0.28s ease, width 0.28s ease;
+  z-index: 2;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group select:focus + label {
+  color: #337ab7;
+}
+
+.form-group input:focus + .bar::before,
+.form-group textarea:focus + .bar::before,
+.form-group select:focus + .bar::before {
+  width: 100%;
+  left: 0;
+}
+
+.checkbox label,
+.form-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+  text-align: left;
+  color: #333;
+  display: block;
+}
+
+.checkbox input,
+.form-radio input {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+
+.radio {
+  margin-bottom: 1rem;
+}
+
+.radio .helper {
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  user-select: none;
+  color: #999;
+}
+
+.radio .helper::before,
+.radio .helper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.28s ease;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+}
+
+.radio .helper::after {
+  transform: scale(0);
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+.radio label:hover .helper {
+  color: #337ab7;
+}
+
+.radio input:checked + .helper::after {
+  transform: scale(0.5);
+}
+
+.checkbox {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox .helper {
+  color: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  z-index: 0;
+  border: 1px solid currentColor;
+  border-radius: 0.0625rem;
+  transition: border-color 0.28s ease;
+}
+
+.checkbox .helper::before,
+.checkbox .helper::after {
+  position: absolute;
+  height: 0;
+  width: 0.2rem;
+  background-color: #337ab7;
+  display: block;
+  transform-origin: left top;
+  border-radius: 0.25rem;
+  content: '';
+  transition: opacity 0.28s ease, height 0s linear 0.28s;
+  opacity: 0;
+}
+
+.checkbox .helper::before {
+  top: 0.65rem;
+  left: 0.38rem;
+  transform: rotate(-135deg);
+  box-shadow: 0 0 0 0.0625rem #fff;
+}
+
+.checkbox .helper::after {
+  top: 0.3rem;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.checkbox label:hover .helper {
+  color: #337ab7;
+}
+
+.checkbox input:checked + .helper {
+  color: #337ab7;
+}
+
+.checkbox input:checked + .helper::after,
+.checkbox input:checked + .helper::before {
+  opacity: 1;
+  transition: height 0.28s ease;
+}
+
+.checkbox input:checked + .helper::after {
+  height: 0.5rem;
+}
+
+.checkbox input:checked + .helper::before {
+  height: 1.2rem;
+  transition-delay: 0.28s;
+}
+
+.button {
+  position: relative;
+  background: currentColor;
+  border: 1px solid currentColor;
+  font-size: 1.1rem;
+  color: #4f93ce;
+  margin: 3rem 0;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button span {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  background: #071017;
+  border: 50vh solid #1d4567;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.button:hover {
+  color: #337ab7;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+.button:active::before,
+.button:focus::before {
+  transition: opacity 0.28s ease 0.364s, transform 1.12s ease;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+.button:focus {
+  outline: none;
+}
