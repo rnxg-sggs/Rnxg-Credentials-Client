@@ -42,8 +42,8 @@ function App() {
         });
         setErrors({});
         // Refresh the page after successful submission
-        window.location.reload();
         alert("Thank you for the response")
+        window.location.reload();
       }
     } catch (error) {
       if (error.response && error.response.data) {
