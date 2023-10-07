@@ -62,7 +62,11 @@ function App() {
     <>
       <div className="container">
         <form onSubmit={handleSubmit}>
-          <h1>RNXG Member List</h1>
+        <div>
+          <img src="https://rnxg.co.in/wp-content/uploads/2021/03/rnxg-logo.png" alt="RNXG" />
+        <h1>RNXG Member List</h1>
+        </div>
+        
           <div className="form-group">
             <input
               type="text"
